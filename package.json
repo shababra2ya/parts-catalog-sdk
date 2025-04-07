@@ -11,11 +11,20 @@
     "build": "tsc",
     "prepublishOnly": "pnpm run build"
   },
-  "keywords": ["parts", "catalog", "sdk"],
+  "keywords": [
+    "parts",
+    "catalog",
+    "sdk"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "@types/node": "^18.0.0"
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "https-proxy-agent": "^7.0.6",
+    "node-fetch": "^3.3.2",
+    "openapi-fetch": "^0.13.5"
   }
 }
