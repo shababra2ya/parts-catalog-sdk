@@ -1,17 +1,21 @@
 {
   "name": "parts-catalog-sdk",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "SDK for parts catalog",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepublishOnly": "pnpm run build"
   },
-  "keywords": [],
+  "keywords": ["parts", "catalog", "sdk"],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.7.1",
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.0.0",
+    "@types/node": "^18.0.0"
   }
 }
