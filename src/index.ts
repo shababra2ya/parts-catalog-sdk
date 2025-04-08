@@ -1,3 +1,3 @@
 
 export * from './BaseClient';
-export * from './MockClient';
+export * from './MockMiddleware';
