@@ -15,13 +15,18 @@ npm install parts-catalog-sdk
 ```bash
 pnpm install parts-catalog-sdk
 ```
-## 🔐 Configuration
-
-1. Add `.env` file in your root folder 
-2. ADD `PARTS_CATALOG_API_KEY` and `PROXY_URL` variables.
 
 ## 🛠 Usage
 
 ```js
-import { partsCatalogClient } from 'parts-catalog-sdk'
+import { getPartsCatalogClient, getMockPartsCatalogClient } from 'parts-catalog-sdk'
+
+
+// You can use the client to fetch data from the API
+const partsCatalogClient = getPartsCatalogClient({apiKey})
+await partsCatalogClient().GET('/catalogs/', {})
+
+// You can use the mock client to fetch data from the API
+const partsCatalogClient = getMockPartsCatalogClient({apiKey: "mockApiKey"})
+await partsCatalogClient().GET('/catalogs/', {})
 ```

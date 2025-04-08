@@ -37,4 +37,4 @@ function client({
   })
 }
 
-export {client as getMockClient}
+export {client as getMockPartsCatalogClient}
