@@ -2,13 +2,24 @@
   "name": "parts-catalog-sdk",
   "version": "1.0.0",
   "description": "SDK for parts catalog",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "unbuild",
     "prepublishOnly": "pnpm run build"
   },
   "keywords": [
@@ -17,14 +28,13 @@
     "sdk"
   ],
   "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "unbuild": "^3.5.0"
   },
   "dependencies": {
-    "https-proxy-agent": "^7.0.6",
-    "node-fetch": "^3.3.2",
-    "openapi-fetch": "^0.13.5"
+    "openapi-fetch": "^0.13.5",
+    "undici": "^7.7.0"
   }
 }
