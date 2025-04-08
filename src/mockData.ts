@@ -22,6 +22,9 @@ export const mockData = {
 		input: {},
 		output: {
 			ip: '31.94.66.68'
+		},
+		headers: {
+			'X-Request-Id': "12ad123a877a548ghd973c2xf659c30b5htbd655"
 		}
 	},
 	'/car/info': {
@@ -123,7 +126,10 @@ export const mockData = {
 				],
 				groupsTreeAvailable: true
 			}
-		]
+		],
+		headers: {
+			'X-Request-Id': "12ad123a877a548ghd973c2xf659c30b5htbd655"
+		}
 	},
 	'/catalogs/': {
 		input: {},
@@ -448,7 +454,10 @@ export const mockData = {
 				name: 'Hyundai Korea',
 				modelsCount: 89
 			}
-		]
+		],
+		headers: {
+			'X-Request-Id': "12ad123a877a548ghd973c2xf659c30b5htbd655"
+		}
 	},
 	'/catalogs/{catalogId}/models/': {
 		input: {
@@ -1240,7 +1249,10 @@ export const mockData = {
 				name: 'bZ3',
 				img: null
 			}
-		]
+		],
+		headers: {
+			'X-Request-Id': "12ad123a877a548ghd973c2xf659c30b5htbd655"
+		}
 	},
 	'/catalogs/{catalogId}/cars2/': {
 		input: {
@@ -1344,7 +1356,11 @@ export const mockData = {
 				brand: 'Toyota',
 				groupsTreeAvailable: true
 			}
-		]
+		],
+		headers: {
+			'X-Request-Id': "12ad123a877a548ghd973c2xf659c30b5htbd655",
+			'X-Total-Count': '1',
+		}
 	},
 	'/catalogs/{catalogId}/cars2/{carId}': {
 		input: {
@@ -1444,6 +1460,9 @@ export const mockData = {
 			criteria: '25@KZN185-9023353<AY16>204',
 			brand: 'Toyota',
 			groupsTreeAvailable: true
+		},
+		headers: {
+			'X-Request-Id': "12ad123a877a548ghd973c2xf659c30b5htbd655"
 		}
 	},
 	'/catalogs/{catalogId}/cars-parameters/': {
@@ -1574,7 +1593,11 @@ export const mockData = {
 				],
 				sortOrder: 100
 			}
-		]
+		],
+		headers: {
+			'X-Request-Id': "12ad123a877a548ghd973c2xf659c30b5htbd655",
+			'X-Cars-Count': '1',
+		}
 	},
 	'/catalogs/{catalogId}/groups2/': {
 		input: {
@@ -1755,7 +1778,10 @@ export const mockData = {
 				description: null,
 				parentId: 'MCPwn5qAMDAx8J-agTE3MjYyOULwn5CJMTcyNjI5Qg'
 			}
-		]
+		],
+		headers: {
+			'X-Request-Id': "12ad123a877a548ghd973c2xf659c30b5htbd655"
+		}
 	},
 	'/catalogs/{catalogId}/parts2': {
 		input: {
@@ -1850,6 +1876,9 @@ export const mockData = {
 					coordinates: [520, 545, 70, 20]
 				}
 			]
+		},
+		headers: {
+			'X-Request-Id': "12ad123a877a548ghd973c2xf659c30b5htbd655"
 		}
 	},
 	'/catalogs/{catalogId}/groups-suggest': {
@@ -1882,7 +1911,10 @@ export const mockData = {
 				sid: '5089',
 				name: 'Wind deflector elements'
 			}
-		]
+		],
+		headers: {
+			'X-Request-Id': "12ad123a877a548ghd973c2xf659c30b5htbd655"
+		}
 	},
 	'/catalogs/{catalogId}/groups-by-sid': {
 		input: {
@@ -1903,7 +1935,10 @@ export const mockData = {
 					'(9511-    )\nｱﾘ(ﾑ-ﾝ ﾙ-ﾌ)                        ILLUST NO. 2 OF 3\n\n\n[ 6153 ]',
 				parentId: null
 			}
-		]
+		],
+		headers: {
+			'X-Request-Id': "12ad123a877a548ghd973c2xf659c30b5htbd655"
+		}
 	},
 	'/catalogs/{catalogId}/groups-tree': {
 		input: {
@@ -4154,7 +4189,10 @@ export const mockData = {
 					}
 				]
 			}
-		]
+		],
+		headers: {
+			'X-Request-Id': "12ad123a877a548ghd973c2xf659c30b5htbd655"
+		}
 	},
 	'/catalogs/{catalogId}/schemas': {
 		input: {
@@ -4185,6 +4223,10 @@ export const mockData = {
 					]
 				}
 			]
+		},
+		headers: {
+			'X-Request-Id': "12ad123a877a548ghd973c2xf659c30b5htbd655",
+			'X-Total-Count': "1",
 		}
 	}
 };
