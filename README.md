@@ -1,25 +1,17 @@
-# 📦 PartsCatalogSdk
+# 📦 parts-catalog-ts
 
-#### This is package to fetch data about cars data include ( schema , groups-tree, parts info, and more)
+#### This is package that interfaces parts-catalog api to fetch data about cars and car parts data.
 
 ## 🚀 Installation
-
-### Using npm
 
 ```bash
 npm install parts-catalog-sdk
 ```
 
-### Using pnpm
-
-```bash
-pnpm install parts-catalog-sdk
-```
-
 ## 🛠 Usage
 
 ```js
-import { getPartsCatalogClient, partsCatalogMockMiddleware } from 'parts-catalog-sdk'
+import { getPartsCatalogClient, partsCatalogMockMiddleware } from 'parts-catalog-ts'
 
 
 // You can use the client to fetch data from the API

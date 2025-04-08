@@ -1,6 +1,6 @@
 import { ProxyAgent } from "undici";
 import type { paths } from './types/pc';
-import createFetchClient, { Middleware } from 'openapi-fetch';
+import createFetchClient, { type Middleware } from 'openapi-fetch';
 
 function client({
   apiKey,

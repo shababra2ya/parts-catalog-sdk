@@ -1,5 +1,5 @@
 {
-  "name": "parts-catalog-sdk",
+  "name": "parts-catalog-ts",
   "version": "1.0.0",
   "description": "SDK for parts catalog",
   "license": "MIT",
