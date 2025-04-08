@@ -1,20 +1,29 @@
 import { mockData } from "./mockData";
 
-const partsCatalogMockMiddleware = {
-  onRequest: async ({ request }: { request: Request }) => {
-    const url = new URL(request.url);
-    const path = url.pathname;
-
-    // @ts-expect-error: Property 'pathname' does not exist on type 'URL'
-    const headers = mockData[path].headers ?? {};
-
-    // @ts-expect-error: Property 'pathname' does not exist on type 'URL'
-    const mockResponse = new Response(JSON.stringify(mockData[path].output), {
-      status: 200,
-      headers: { "Content-Type": "application/json" , ...headers},
-    });
-    return mockResponse;
+class PartsCatalogMockMiddlewareFactory {
+  middleware
+  path?: string
+  constructor() {
+    this.middleware = {
+      onRequest: async ({}: { request: Request }) => {
+        if (!this.path) {
+          throw new Error("Path is not set");
+        }
+        // @ts-expect-error: Property 'pathname' does not exist on type 'URL'
+        const headers = mockData[this.path].headers ?? {};
+  
+        // @ts-expect-error: Property 'pathname' does not exist on type 'URL'
+        const mockResponse = new Response(JSON.stringify(mockData[path].output), {
+          status: 200,
+          headers: { "Content-Type": "application/json" , ...headers},
+        });
+        return mockResponse;
+      }
+    };
+  }
+  setPath(path: string) {
+    this.path = path;
   }
 }
 
-export {partsCatalogMockMiddleware}
+export {PartsCatalogMockMiddlewareFactory, mockData as partsCatalogMockData}
