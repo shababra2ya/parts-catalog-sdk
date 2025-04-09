@@ -41,4 +41,4 @@ function client({
   return client;
 }
 
-export {client as getPartsCatalogClient, paths as partsCatalogPaths}
+export {client as getPartsCatalogBaseClient, paths as partsCatalogPaths}
