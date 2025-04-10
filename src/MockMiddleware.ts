@@ -6,6 +6,7 @@ const middleware = {
       // remove leading and trailing slashes
       const segments = path.split("/").filter((segment) => segment !== "");
       const requestSegments = new URL(request.url).pathname.split("/").filter((segment) => segment !== "");
+      requestSegments.shift();
       if (segments.length !== requestSegments.length) {
         return false;
       }
